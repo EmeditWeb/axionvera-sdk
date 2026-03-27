@@ -13,3 +13,16 @@ export { buildContractCallOperation, buildContractCallTransaction, toScVal } fro
 
 export type { RetryConfig } from "./utils/httpInterceptor";
 export { createHttpClientWithRetry, retry } from "./utils/httpInterceptor";
+
+// Export MSW handlers for consumer testing
+export { server, setupMswTest, overrideHandlers } from "./test/msw/server";
+export {
+    handlers,
+    healthHandler,
+    accountHandler,
+    transactionHandler,
+    submitTransactionHandler,
+    rateLimitHandler,
+    serverErrorHandler,
+    notFoundHandler
+} from "./test/msw/handlers";
